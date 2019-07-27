@@ -1,9 +1,3 @@
-/*********************************************
- * by Gabriel 'Hezag' Nunes
- * website: http://multiverso.me
- * email: gabriel (at) multiverso (dot) me
- * github: https://github.com/gnuns
- **********************************************/
 
 (function(){
   window.serverURI = 'http://localhost:3000';
