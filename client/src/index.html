@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Qubits">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3F4343">
+  <meta name="msapplication-navbutton-color" content="#3F4343">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#3F4343">
+  <title>omigo</title>
+  <!--build:css css/styles.min.css-->
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!--endbuild-->
+</head>
+<body id="body">
+  <div class="header" style="box-shadow: 1px 1px 6px;">
+    <div class="container">
+      <div class="logo">
+        <a href="./"><img src="img/logo.png" width="125px" alt="CollgeChat"></a>
+      </div>
+      <button class="btn green" type="button" name="action" id="control" data-current="start" style="margin-left:50px;">start</button>
+      <div class="online-count">
+        <strong>x</strong> online now
+      </div>
+    </div>
+  </div>
+  <div class="container main">
+    <div class="chat text-only">
+      <div class="video">
+        <div class="stranger basic-shadow">
+          <div class="load-canvas">
+            <div class="spinner">
+              <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+              <span class="sr-only">Loading...</span>
+            </div>
+          </div>
+        </div>
+        <div class="me  basic-shadow"></div>
+      </div>
+      <div class="text basic-shadow">
+          <div class="conversation-box" id="conversation-box">
+            <!-- WELCOME MESSAGE -->
+            <p class="syslog"><strong>Hi, welcome to <span class="special">CollegeChat</span>!</strong></p>
+            <p></p>
+            <p></p>
+            <p class="syslog"><strong>CollegeChat</strong> is a great way to meet new people from different colleges.</p>
+            <p class="syslog">When you use CollegeChat, we pick someone else at random and let you talk one-on-one.</p>
+            <p class="syslog">To help you stay safe, chats are anonymous unless you tell someone who you are (not suggested!),</p>
+            <p class="syslog">and even we can't get a peek into your chats at any point of time.</p>
+            <p class="syslog">If you are looking to be the reason for someone's smile today, then you have come to the right place!</p>
+            <p></p>
+            <p></p>
+            <p class="syslog"><strong>Click on the <span class="special">start</span> button (on top bar) or press <span class="special">ESC</span> and <i>have a nice chatting!</i></strong></p>
+            <p></p>
+          </div>
+          <!-- <div class="type" style="height:35px; background-color: yellow;font-size: 12px; font-style: italic;margin-top:0px;"></div> -->
+
+          <div class="type" style="height:35px; font-size: 12px; font-style: italic; transform: translateY(75vh); color: grey;"></div> 
+          <div class="write-box" style="transform: translateY(-38px);">
+            <textarea name="message" style="font-size:16px; vertical-align:center; width: 76% !important; resize: none !important; overflow-x:scroll; white-space:nowrap;"></textarea>
+            <button class="btn" type="button" name="button" style="width:20.5% !important; height: 80px; margin-right:0px; margin-top:-10px !important;">send</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--build:js js/vendor.min.js -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/socket.io-client/dist/socket.io.min.js"></script>
+  <script src="../node_modules/rtcpeerconnection/rtcpeerconnection.bundle.js"></script>
+  <script src="../node_modules/webrtc-adapter/out/adapter.js"></script>
+  <!-- endbuild -->
+  <!--build:js js/main.min.js -->
+  <script src="js/app.js"></script>
+  <script src="js/chat-box.js"></script>
+  <script src="js/chat-client.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
