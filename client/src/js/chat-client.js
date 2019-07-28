@@ -16,7 +16,10 @@ window.chatClient = (function() {
   socket.on('videochat_ice', processIce);
   socket.on('disconnect', handleServerDisconnection);
 
-  tryVideoChat();
+  sendLocalInfo();
+  localMediaStream = null;
+  isVideoChat = false;
+  //tryVideoChat();
 
   return {
     'sendMessage': sendMessage,
